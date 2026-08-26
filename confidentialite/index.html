@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Politique de confidentialité · WhispAI Story</title>
+    <meta name="description" content="Politique de confidentialité de WhispAI Story et de son intégration à l’API YouTube.">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="/" aria-label="WhispAI Story — Accueil">
+          <span class="brand-mark" aria-hidden="true"><span></span></span>
+          <span>WhispAI Story</span>
+        </a>
+        <nav aria-label="Navigation principale">
+          <a href="/confidentialite/">Confidentialité</a>
+          <a href="/conditions/">Conditions</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="legal shell">
+      <header class="legal-header">
+        <p class="kicker">Transparence</p>
+        <h1>Politique de confidentialité</h1>
+        <p class="legal-date">Dernière mise à jour : 26 août 2026</p>
+      </header>
+
+      <div class="legal-grid">
+        <aside aria-label="Sommaire">
+          <p>Sur cette page</p>
+          <a href="#responsable">Responsable</a>
+          <a href="#google">Données Google</a>
+          <a href="#utilisation">Utilisation</a>
+          <a href="#conservation">Conservation</a>
+          <a href="#droits">Vos droits</a>
+        </aside>
+
+        <article class="legal-content">
+          <section id="objet">
+            <h2>1. Objet</h2>
+            <p>Cette politique explique comment WhispAI Story traite les données nécessaires au fonctionnement de Revenue Engine, son outil privé de production et de publication de vidéos. Le site public ne comporte ni formulaire, ni espace membre, ni système de paiement.</p>
+          </section>
+
+          <section id="responsable">
+            <h2>2. Responsable</h2>
+            <p>WhispAI Story est un projet personnel exploité par son propriétaire. Ce site ne propose aucun compte utilisateur, ne collecte aucune donnée directement auprès du public et ne met à disposition aucun canal de contact.</p>
+          </section>
+
+          <section id="google">
+            <h2>3. Données liées à Google et YouTube</h2>
+            <p>Revenue Engine utilise l’autorisation Google <code>youtube.upload</code>. Cette autorisation sert exclusivement à importer, sur la chaîne YouTube autorisée par son propriétaire, les vidéos que celui-ci a préalablement validées.</p>
+            <p>Les données techniques susceptibles d’être traitées sont :</p>
+            <ul>
+              <li>le jeton d’autorisation OAuth nécessaire pour communiquer avec l’API YouTube, jamais le mot de passe Google ;</li>
+              <li>l’identifiant de la chaîne autorisée et l’identifiant attribué à chaque vidéo envoyée ;</li>
+              <li>les fichiers vidéo et leurs métadonnées de publication : titre, description et niveau de confidentialité ;</li>
+              <li>les réponses techniques indispensables pour confirmer le succès ou l’échec d’un envoi.</li>
+            </ul>
+          </section>
+
+          <section id="utilisation">
+            <h2>4. Utilisation et partage</h2>
+            <p>Ces données servent uniquement à publier et à contrôler les vidéos WhispAI Story à la demande du propriétaire de la chaîne. Elles ne sont ni vendues, ni louées, ni utilisées à des fins de publicité, de profilage ou d’entraînement d’un modèle d’intelligence artificielle.</p>
+            <p>Elles ne sont transmises qu’aux services nécessaires à cette opération : Google/YouTube pour l’autorisation et la publication, ainsi que GitHub Actions pour l’exécution privée et sécurisée de l’automatisation. L’utilisation des informations reçues des API Google respecte la Politique relative aux données utilisateur des services API Google, notamment ses exigences d’utilisation limitée.</p>
+          </section>
+
+          <section id="securite">
+            <h2>5. Sécurité</h2>
+            <p>Les identifiants OAuth sont conservés dans les secrets chiffrés du dépôt privé Revenue Engine. Ils ne figurent ni dans le code public, ni sur ce site, ni dans les vidéos publiées. Les accès sont limités au propriétaire et peuvent être révoqués à tout moment.</p>
+          </section>
+
+          <section id="conservation">
+            <h2>6. Conservation et suppression</h2>
+            <p>Le jeton OAuth est conservé tant que l’intégration YouTube reste active. Les métadonnées techniques sont conservées uniquement le temps nécessaire au fonctionnement, au diagnostic et à la sécurité du service, selon la durée de conservation configurée pour les journaux privés GitHub Actions.</p>
+            <p>Le propriétaire peut supprimer l’accès depuis les paramètres de sécurité de son compte Google. La révocation invalide l’accès de Revenue Engine aux services Google concernés.</p>
+          </section>
+
+          <section id="hebergement">
+            <h2>7. Hébergement du site</h2>
+            <p>Ce site statique est hébergé par GitHub Pages. GitHub peut traiter certaines données techniques, notamment l’adresse IP, pour assurer la sécurité et la disponibilité de son service, conformément à sa propre politique de confidentialité.</p>
+          </section>
+
+          <section id="droits">
+            <h2>8. Droits et modifications</h2>
+            <p>Puisque le site public ne recueille aucune donnée directement, il n’existe pas de compte ou de dossier visiteur à consulter ou à supprimer auprès de WhispAI Story. Cette politique pourra évoluer si les fonctionnalités du projet ou les exigences applicables changent. La date de mise à jour sera alors modifiée sur cette page.</p>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <div>
+          <p class="footer-brand">WhispAI Story</p>
+          <p>Histoires vraies. Formats courts. Curiosité intacte.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/confidentialite/">Politique de confidentialité</a>
+          <a href="/conditions/">Conditions d’utilisation</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
