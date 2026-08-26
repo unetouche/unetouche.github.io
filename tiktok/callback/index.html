@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Autorisation TikTok — WhispAI Story</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: radial-gradient(circle at top, #172554 0, #080b16 48%, #05070d 100%);
+      color: #f8fafc;
+    }
+    main {
+      width: min(560px, 100%);
+      padding: 40px 32px;
+      border: 1px solid rgba(103, 232, 249, .22);
+      border-radius: 24px;
+      background: rgba(10, 15, 30, .88);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, .45);
+      text-align: center;
+    }
+    .mark {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 20px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #22d3ee, #a855f7 58%, #ec4899);
+      color: #05070d;
+      font-size: 30px;
+      font-weight: 900;
+    }
+    h1 { margin: 0 0 12px; font-size: clamp(28px, 6vw, 40px); }
+    p { margin: 0; color: #cbd5e1; line-height: 1.6; }
+    button {
+      margin-top: 24px;
+      padding: 12px 18px;
+      border: 0;
+      border-radius: 12px;
+      background: #22d3ee;
+      color: #071018;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .note { margin-top: 24px; font-size: 13px; color: #64748b; }
+    .error { color: #fda4af; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="mark" aria-hidden="true">W</div>
+    <h1>WhispAI Story</h1>
+    <p id="status">Retour d’autorisation TikTok prêt.</p>
+    <button id="copy" type="button" hidden>Copier le code d’autorisation</button>
+    <p class="note">Cette page ne transmet aucune donnée à un service tiers.</p>
+  </main>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+    const error = params.get("error");
+    const errorDescription = params.get("error_description");
+    const status = document.getElementById("status");
+    const copy = document.getElementById("copy");
+
+    if (code) {
+      status.textContent = "Autorisation reçue. Copiez le code pour terminer la connexion sécurisée.";
+      copy.hidden = false;
+      copy.addEventListener("click", async () => {
+        await navigator.clipboard.writeText(code);
+        copy.textContent = "Code copié";
+      });
+    } else if (error) {
+      status.className = "error";
+      status.textContent = errorDescription || "L’autorisation TikTok a été refusée ou interrompue.";
+    }
+  </script>
+</body>
+</html>
