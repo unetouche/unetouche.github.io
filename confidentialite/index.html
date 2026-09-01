@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Politique de confidentialité · WhispAI Story</title>
-    <meta name="description" content="Politique de confidentialité de WhispAI Story et de son intégration à l’API YouTube.">
+    <meta name="description" content="Politique de confidentialité de WhispAI Story et de ses intégrations YouTube, TikTok et Instagram.">
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
@@ -25,14 +25,14 @@
       <header class="legal-header">
         <p class="kicker">Transparence</p>
         <h1>Politique de confidentialité</h1>
-        <p class="legal-date">Dernière mise à jour : 26 août 2026</p>
+        <p class="legal-date">Dernière mise à jour : 1er septembre 2026</p>
       </header>
 
       <div class="legal-grid">
         <aside aria-label="Sommaire">
           <p>Sur cette page</p>
           <a href="#responsable">Responsable</a>
-          <a href="#google">Données Google</a>
+          <a href="#plateformes">Données des plateformes</a>
           <a href="#utilisation">Utilisation</a>
           <a href="#conservation">Conservation</a>
           <a href="#droits">Vos droits</a>
@@ -41,41 +41,45 @@
         <article class="legal-content">
           <section id="objet">
             <h2>1. Objet</h2>
-            <p>Cette politique explique comment WhispAI Story traite les données nécessaires au fonctionnement de Revenue Engine, son outil privé de production et de publication de vidéos. Le site public ne comporte ni formulaire, ni espace membre, ni système de paiement.</p>
+            <p>Cette politique explique comment WhispAI Story traite les données nécessaires au fonctionnement de Revenue Engine, son outil privé de production, de publication et d’analyse de performances de vidéos. Le site public ne comporte ni formulaire, ni espace membre, ni système de paiement.</p>
           </section>
 
           <section id="responsable">
             <h2>2. Responsable</h2>
-            <p>WhispAI Story est un projet personnel exploité par son propriétaire. Ce site ne propose aucun compte utilisateur, ne collecte aucune donnée directement auprès du public et ne met à disposition aucun canal de contact.</p>
+            <p>WhispAI Story est un projet personnel exploité par son propriétaire. Ce site ne propose aucun compte utilisateur, ne collecte aucune donnée directement auprès du public et ne met à disposition aucun service de publication pour des tiers.</p>
           </section>
 
-          <section id="google">
-            <h2>3. Données liées à Google et YouTube</h2>
-            <p>Revenue Engine utilise l’autorisation Google <code>youtube.upload</code>. Cette autorisation sert exclusivement à importer, sur la chaîne YouTube autorisée par son propriétaire, les vidéos que celui-ci a préalablement validées.</p>
-            <p>Les données techniques susceptibles d’être traitées sont :</p>
+          <section id="plateformes">
+            <h2>3. Données liées aux plateformes sociales</h2>
+            <p>Revenue Engine se connecte uniquement aux comptes sociaux autorisés par leur propriétaire afin de publier des vidéos préalablement validées et d’en mesurer les performances.</p>
+            <p>Pour YouTube, Revenue Engine peut utiliser les autorisations Google <code>youtube.upload</code>, <code>youtube.readonly</code> et <code>yt-analytics.readonly</code>. Elles servent respectivement à importer les vidéos validées, à identifier les vidéos et la chaîne autorisées, et à lire les rapports YouTube Analytics en lecture seule.</p>
+            <p>Pour TikTok, Revenue Engine peut utiliser les autorisations <code>user.info.basic</code>, <code>video.upload</code> et, lorsqu’elle est accordée, <code>video.list</code>. Elles servent à identifier le compte autorisé, transmettre une vidéo selon le mode de publication configuré et lire les métadonnées et statistiques publiques des vidéos de ce compte. Si l’intégration TikTok API for Business est utilisée ultérieurement, seules les permissions nécessaires à la gestion et à l’analyse du compte WhispAI Story seront demandées.</p>
+            <p>Pour Instagram, Revenue Engine utilise le jeton d’accès du compte professionnel autorisé afin de publier les Reels validés et de lire les Insights disponibles pour ces contenus.</p>
+            <p>Les données techniques susceptibles d’être traitées comprennent :</p>
             <ul>
-              <li>le jeton d’autorisation OAuth nécessaire pour communiquer avec l’API YouTube, jamais le mot de passe Google ;</li>
-              <li>l’identifiant de la chaîne autorisée et l’identifiant attribué à chaque vidéo envoyée ;</li>
-              <li>les fichiers vidéo et leurs métadonnées de publication : titre, description et niveau de confidentialité ;</li>
-              <li>les réponses techniques indispensables pour confirmer le succès ou l’échec d’un envoi.</li>
+              <li>les jetons OAuth ou jetons d’accès nécessaires aux API, jamais les mots de passe des plateformes ;</li>
+              <li>les identifiants des comptes, chaînes, publications et conteneurs techniques ;</li>
+              <li>les fichiers vidéo et leurs métadonnées de publication : titre, description et paramètres de visibilité ;</li>
+              <li>les métriques fournies par les plateformes, telles que vues, portée, durée moyenne de visionnage, taux moyen regardé, likes, commentaires, partages, sauvegardes et abonnements gagnés lorsque ces données sont disponibles ;</li>
+              <li>les réponses techniques nécessaires pour confirmer le succès, l’échec ou l’état d’une publication.</li>
             </ul>
           </section>
 
           <section id="utilisation">
             <h2>4. Utilisation et partage</h2>
-            <p>Ces données servent uniquement à publier et à contrôler les vidéos WhispAI Story à la demande du propriétaire de la chaîne. Elles ne sont ni vendues, ni louées, ni utilisées à des fins de publicité, de profilage ou d’entraînement d’un modèle d’intelligence artificielle.</p>
-            <p>Elles ne sont transmises qu’aux services nécessaires à cette opération : Google/YouTube pour l’autorisation et la publication, ainsi que GitHub Actions pour l’exécution privée et sécurisée de l’automatisation. L’utilisation des informations reçues des API Google respecte la Politique relative aux données utilisateur des services API Google, notamment ses exigences d’utilisation limitée.</p>
+            <p>Ces données servent uniquement à publier, contrôler et améliorer les vidéos WhispAI Story sur les comptes du propriétaire. Les métriques sont utilisées pour comparer les performances des contenus et améliorer les choix éditoriaux et le format des prochaines vidéos.</p>
+            <p>Les données ne sont ni vendues, ni louées, ni utilisées à des fins de publicité ciblée ou de profilage de visiteurs. Elles ne sont transmises qu’aux services nécessaires au fonctionnement de Revenue Engine, notamment Google/YouTube, TikTok, Meta/Instagram et GitHub Actions. L’utilisation des informations reçues des API Google respecte la Politique relative aux données utilisateur des services API Google, notamment ses exigences d’utilisation limitée.</p>
           </section>
 
           <section id="securite">
             <h2>5. Sécurité</h2>
-            <p>Les identifiants OAuth sont conservés dans les secrets chiffrés du dépôt privé Revenue Engine. Ils ne figurent ni dans le code public, ni sur ce site, ni dans les vidéos publiées. Les accès sont limités au propriétaire et peuvent être révoqués à tout moment.</p>
+            <p>Les identifiants OAuth et jetons d’accès sont conservés dans les secrets chiffrés du dépôt privé Revenue Engine. Ils ne figurent ni dans le code public, ni sur ce site, ni dans les rapports de métriques publiés dans le dépôt. Les accès sont limités au propriétaire et peuvent être révoqués auprès de chaque plateforme.</p>
           </section>
 
           <section id="conservation">
             <h2>6. Conservation et suppression</h2>
-            <p>Le jeton OAuth est conservé tant que l’intégration YouTube reste active. Les métadonnées techniques sont conservées uniquement le temps nécessaire au fonctionnement, au diagnostic et à la sécurité du service, selon la durée de conservation configurée pour les journaux privés GitHub Actions.</p>
-            <p>Le propriétaire peut supprimer l’accès depuis les paramètres de sécurité de son compte Google. La révocation invalide l’accès de Revenue Engine aux services Google concernés.</p>
+            <p>Les jetons sont conservés tant que les intégrations correspondantes restent actives. Les rapports techniques et métriques sont conservés uniquement le temps nécessaire au fonctionnement, au diagnostic, à l’analyse des performances et à la sécurité du service.</p>
+            <p>Le propriétaire peut révoquer les autorisations depuis les paramètres de sécurité de son compte Google ou depuis les interfaces d’autorisation TikTok et Meta concernées. La révocation invalide l’accès de Revenue Engine aux services correspondants.</p>
           </section>
 
           <section id="hebergement">
